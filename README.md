@@ -5,7 +5,7 @@ Repository for "H-Sets: Uncovering Feature Interactions in Image Classification 
 Our paper proposes an approach to incorporate feature interaction into saliency maps for image classification. To run our code, you would need to download ImageNette from [here](https://github.com/fastai/imagenette).
 
 ## Dependencies
- - quantus
- - opencv
- - captum
- - [SAM](https://github.com/facebookresearch/segment-anything.git)
+ - quantus (for sparisty and ROAD metrics)
+ - opencv (for image processing)
+ - captum (for saliency maps)
+ - [SAM](https://github.com/facebookresearch/segment-anything.git) (for image segmentation)
