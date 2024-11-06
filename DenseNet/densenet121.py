@@ -43,7 +43,7 @@ def Hessian_metrics(model, test_loader, threshold):
     a_batches = []
     count = 0
     for i, (x_batch, y_batch) in enumerate(test_loader):
-        if count > 10:
+        if count > 1000:
             break
         count += len(x_batch)
         print("INFO: " + str(count))
