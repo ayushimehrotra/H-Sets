@@ -43,7 +43,7 @@ def Hessian_metrics(model, test_loader, threshold):
     a_batches = []
     count = 0
     for i, (x_batch, y_batch) in enumerate(test_loader):
-        if count > 10:
+        if count > 1000:
             break
         count += len(x_batch)
         print("INFO: " + str(count))
@@ -68,9 +68,9 @@ def Hessian_metrics(model, test_loader, threshold):
             score_ROAD.append(answer)
         except:
             pass
-    np.save("x_batches_mobilenetv2", x_batches)
-    np.save("y_batches_mobilenetv2", y_batches)
-    np.save("a_batches_mobilenetv2", a_batches)
+    np.save("x_batches_vgg", x_batches)
+    np.save("y_batches_vgg", y_batches)
+    np.save("a_batches_vgg", a_batches)
     return score_sparse, score_ROAD
 
 
@@ -102,6 +102,6 @@ if __name__ == "__main__":
     
     threshold = 0.50
     sparse, ROAD = Hessian_metrics(model, dataloaders["validation"], threshold)
-    np.save("sparse_mobilenetv2", sparse)
-    np.save("ROAD_mobilenetv2", ROAD)
+    np.save("sparse_vgg", sparse)
+    np.save("ROAD_vgg", ROAD)
     print(np.nanmean(sparse), np.nanstd(sparse))
