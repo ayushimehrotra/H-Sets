@@ -3,8 +3,9 @@ import torch.nn as nn
 import torch
 
 # Experimented with multiple values of tau for Modified ReLU Function
-# Experimented with SoftPlus, ModifiedReLU works better
+# Experimented with SoftPlus, ModifiedReLU works better. SoftPlus was coded by the author.
 
+# Code referenced from https://github.com/alps-lab/adv2 to create gradient approximation
 class ModifiedReLUFunction(torch.autograd.Function):
     @staticmethod
     def forward(ctx, x):
