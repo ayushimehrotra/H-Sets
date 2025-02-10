@@ -1,3 +1,5 @@
+# All code in this file was created by Ayushi Mehrotra
+
 import torch
 import torchvision
 from torch import nn, optim
