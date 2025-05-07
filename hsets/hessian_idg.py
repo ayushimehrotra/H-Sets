@@ -21,6 +21,9 @@ class HessianIntegratedDirectionalGradients:
         self.ig = IntegratedGradients(model)
 
     def make_attribution(self, input, index, max_elements, threshold):
+        '''
+            Create interaction set with given maximum elements and threshold
+        '''
         model_copy = copy.deepcopy(self.model)
         replace_relu_with_modifiedrelu(model_copy)
         current_attribution_image = np.zeros(input.squeeze().detach().cpu().numpy().shape)
@@ -77,6 +80,11 @@ class HessianIntegratedDirectionalGradients:
         return current_attribution_image
 
     def find_feature_interaction_sets_sam(self, input, k, threshold):
+        '''
+            Find the starting point for the feature interaction set
+            using SAM and Integrated Gradients. Uses the maximum value
+            from Integrated Gradients as a starting point.
+        '''
         gc.collect()
         torch.cuda.empty_cache()
 
@@ -141,6 +149,10 @@ class HessianIntegratedDirectionalGradients:
         return sets
 
     def attribute_set_ig(self, input, mask, steps=30):
+        '''
+            Find importance score from a given mask (interaction set)
+            using Integrated Directional Gradients
+        '''
         np_image = np.transpose(input.cpu().detach().numpy(), (1, 2, 0))
         img = np.zeros(np_image.shape)
         mag = np.zeros(np_image.shape)
