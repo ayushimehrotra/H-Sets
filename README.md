@@ -1,6 +1,6 @@
 # H-Sets: Uncovering Feature Interactions in Image Classification using Hessian
 
-Repository for "H-Sets: Uncovering Feature Interactions in Image Classification using Hessian," presented at the ATTRIB Workshop at Conference on Neural Information Processing Systems (NeurIPS) 2024. 
+Repository for "H-Sets: Uncovering Feature Interactions in Image Classification using Hessian," submitted to the Conference on Computer Vision and Pattern Recognition 2026. 
 
 ## Introduction
 Feature attribution methods have emerged as a key tool for model explainability, assigning importance scores to individual input features in order to explain a model's decision for a specific input. However, these methods typically assume additive effects and focus solely on the marginal contribution of individual features, overlooking a critical aspect of model behavior: _feature interaction_.
