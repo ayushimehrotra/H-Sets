@@ -1,5 +1,3 @@
-# All code in this file was created by Ayushi Mehrotra.
-
 import numpy as np
 import matplotlib.pyplot as plt 
 import torch
