@@ -1,5 +1,3 @@
-# All code in this file was created by Ayushi Mehrotra
-
 import torch
 import gc
 import numpy as np
