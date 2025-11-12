@@ -20,4 +20,4 @@ You can install these libraries using
 ```pip install -r requirements.txt```
 
 ## Models and Baselines Used
-We use MobileNetV3 (Large), DenseNet121, ResNet101, and VGG16 on ImageNet and Caltech-UCSD Birds-200-2011. See models folder for the training script. On each model, we run 4 baselines: Integrated Gradients, Archipelago, Context-Aware First-Order (CAFO) explanations, and Context-Aware Second-Order (CASO) explanations. We provide the code for each baseline in the baselines folder. 
+We use MobileNetV3 (Large), DenseNet121, ResNet101, and VGG16 on ImageNet and Caltech-UCSD Birds-200-2011. See models folder for the training script. On each model, we run 5 baselines: Integrated Gradients, Archipelago, Context-Aware First-Order (CAFO) explanations, Context-Aware Second-Order (CASO) explanations, and Model eXplanation by Interactions (MoXI). We provide the code for each baseline in the baselines folder. 
